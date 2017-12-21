@@ -22,7 +22,5 @@
       "Aliyun\\": "src/"
     }
   },
-  "extra": {
-  },
   "minimum-stability": "stable"
 }
