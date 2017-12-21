@@ -23,5 +23,6 @@
     }
   },
   "extra": {
-  }
+  },
+  "minimum-stability": "stable"
 }
