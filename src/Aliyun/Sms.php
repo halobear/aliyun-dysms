@@ -23,10 +23,10 @@ class Sms
     private $templateCode = '';
     private $outId = '';
 
-    public function __construct($app_key, $app_secret)
+    public function __construct($access_key, $access_secret)
     {
-        $this->setAppKey($app_key);
-        $this->setAppSecret($app_secret);
+        $this->setAccessKeyId($access_key);
+        $this->setAccessKeySecret($access_secret);
 
         // 初始化阿里云config
         AliyunConfig::load();
