@@ -18,9 +18,6 @@ class Application
 {
     private $accessKeyId = '';
     private $accessKeySecret = '';
-    private $signName = '';
-    private $templateCode = '';
-    private $outId = '';
 
     public function __construct($access_key, $access_secret)
     {
