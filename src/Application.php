@@ -69,20 +69,20 @@ class Application
     public function getAcsClient()
     {
         //产品名称:云通信流量服务API产品,开发者无需替换
-        $product = "Dysmsapi";
+        $product = "Green";
 
         //产品域名,开发者无需替换
-        $domain = "dysmsapi.aliyuncs.com";
+        $domain = "green.cn-shanghai.aliyuncs.com";
 
         $accessKeyId = $this->getAccessKeyId(); // AccessKeyId
 
         $accessKeySecret = $this->getAccessKeySecret(); // AccessKeySecret
 
         // 暂时不支持多Region
-        $region = "cn-hangzhou";
+        $region = "cn-shanghai";
 
         // 服务结点
-        $endPointName = "cn-hangzhou";
+        $endPointName = "cn-shanghai";
 
         //初始化acsClient,暂不支持region化
         $profile = DefaultProfile::getProfile($region, $accessKeyId, $accessKeySecret);
@@ -130,8 +130,10 @@ class Application
                         foreach ($sceneResults as $sceneResult) {
                             $scene      = $sceneResult->scene;
                             $suggestion = $sceneResult->suggestion;
+                            $label      = $sceneResult->label;
+                            $rate       = $sceneResult->rate;
                             //根据scene和suggetion做相关的处理
-                            $data[] = ['scene' => $scene, 'suggestion' => $suggestion];
+                            $data[] = ['rate' => $rate, 'scene' => $scene, 'suggestion' => $suggestion, 'label' => $label];
                         }
                     }
                 }
